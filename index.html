@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">SMALL STEPS, EVERY DAY</p>
+      <h1>Daily Habit Tracker</h1>
+      <p class="subtitle">Build consistency, one check at a time.</p>
+    </header>
+
+    <section class="card">
+      <form id="habit-form">
+        <label class="sr-only" for="habit-input">New habit</label>
+        <input id="habit-input" type="text" placeholder="Add a habit (e.g. Read 10 pages)" maxlength="70" required />
+        <button type="submit">Add habit</button>
+      </form>
+
+      <div class="summary">
+        <span id="progress-text">0 of 0 completed</span>
+        <div class="progress-track" aria-label="Daily progress">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <ul id="habit-list" aria-live="polite"></ul>
+      <p id="empty-state">Your list is empty. Add a habit to get started!</p>
+      <button id="clear-completed" class="secondary" type="button">Clear completed</button>
+    </section>
+
+    <footer>Made with HTML, CSS & JavaScript · Your habits stay in this browser.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
